@@ -1,0 +1,589 @@
+:root {
+  --primary-color: hsl(267, 66%, 60%);
+  --primary-color-light:hsl(267, 87%, 76%);
+  --secondary-color:hsl(317, 100%, 74%);
+  --secondary-color-light:hsl(317, 71%, 73%);
+  --tertiary-color:hsl(165, 56%, 74%);
+}
+
+@keyframes ro {
+  0% {
+    transform: rotate(0);
+    margin-left: 50px;
+    width: 20px;
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(360deg);
+    margin-left: 25px;
+    width: 20px;
+    opacity: 100%;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+
+header {
+  min-width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.backbotton {
+  border: 1px solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+.logo-img5 {
+  width: 150px;
+  height: 30px;
+  padding-top: 10px;
+  margin-left: 80px;
+}
+
+main {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.menu-img {
+  height: 250px;
+  min-width: 100%;
+  background-size: cover;
+  background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+}
+
+.full-menu {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: #fff9f9;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: -50px;
+}
+
+.bastille {
+  font-family: Shrikhand;
+  padding-top: 30px;
+  padding-left: 25px;
+  font-size: 20px;
+}
+
+.batille-box {
+  height: 50px;
+  display: flex;
+}
+
+.heart5 {
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 170px;
+  cursor: pointer;
+}
+
+.heart5 i {
+  margin-left: 80px;
+  font-size: 50px;
+  transition: 3s linear;
+  border-color: black;
+  color: transparent;
+}
+
+.heart5,
+.heart5::after {
+  border: 2px solid;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  width: 10px;
+  height: 8px;
+  border-bottom: 0;
+}
+
+.heart5 {
+  box-sizing: border-box;
+  position: relative;
+  transform: translate(calc(-5px * var(--ggs, 1)), calc(-3px * var(--ggs, 1))) rotate(-45deg) scale(var(--ggs, 1));
+  display: block;
+}
+
+.heart5::after,
+.heart5::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.heart5::after {
+  right: -9px;
+  transform: rotate(90deg);
+  top: 5px;
+}
+
+.heart5::before {
+  width: 11px;
+  height: 11px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  left: -2px;
+  top: 3px;
+}
+
+.heart5:hover {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color) 80%);
+  transition: 3s linear;
+}
+
+.heart5:hover::after {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  transition: 3s linear;
+}
+
+.heart5:hover::before {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  transition: 3s linear;
+}
+
+.entrees p {
+  border-bottom: 3px solid var(--tertiary-color);
+  margin-left: 25px;
+  padding-top: 20px;
+  width: 40px;
+}
+
+.buttons1 {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  margin-left: 20px;
+  margin: 20px;
+  width: 340px;
+  cursor: pointer;
+}
+
+.citrus {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+}
+
+.citrus span {
+  margin-right: 160px;
+}
+
+.citrus:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.citrus:hover span {
+  margin-right: 100px;
+}
+
+.buttons1:hover .tick-mark {
+  animation: 3s ro 1;
+}
+
+.check {
+  width: 65px;
+  height: 65px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-left: 275px;
+  box-shadow: 3px 3px 3px 3px #e4e4e7;
+  background: var(--tertiary-color);
+}
+
+.tick-mark {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
+  margin-left: 45px;
+  margin-top: 20px;
+  background: white;
+  opacity: 0;
+}
+
+.tick-mark::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 50%;
+  width: 3px;
+  background-color: var(--tertiary-color);
+  content: "";
+  transform: translateX(10px) rotate(-45deg);
+  transform-origin: left bottom;
+}
+
+.tick-mark::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: var(--tertiary-color);
+  content: "";
+  transform: translateX(10px) rotate(-45deg);
+  transform-origin: left bottom;
+}
+
+.grandmothers {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.grandmothers span {
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+.grandmothers:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.grandmothers:hover span {
+  margin-right: 7px;
+  font-size: 13px;
+}
+
+.grandmothers:hover .tick-mark {
+  animation: 2s ro 2;
+}
+
+.onions {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.onions span {
+  margin-right: 220px;
+}
+
+.onions:active, .onions:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.onions:hover span {
+  margin-right: 170px;
+}
+
+.main-dish p {
+  border-bottom: 3px solid var(--tertiary-color);
+  border-width: 0 3px 3px 0;
+  margin-left: 25px;
+  padding-top: 20px;
+  width: 81px;
+}
+
+.scallops {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.scallops span {
+  margin-right: 130px;
+}
+
+.scallops:active, .scallops:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.scallops:hover span {
+  margin-right: 80px;
+}
+
+.magret {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.magret span {
+  margin-right: 120px;
+}
+
+.magret:active, .magret:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.magret:hover span {
+  margin-right: 70px;
+}
+
+.game {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.game span {
+  margin-right: 105px;
+}
+
+.game:active, .game:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.game:hover span {
+  margin-right: 55px;
+}
+
+.desserts p {
+  border-bottom: 3px solid var(--tertiary-color);
+  margin-left: 25px;
+  padding-top: 20px;
+  width: 40px;
+}
+
+.floral {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.floral span {
+  margin-right: 140px;
+}
+
+.floral:active, .floral:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.floral:hover span {
+  margin-right: 90px;
+}
+
+.chocolate {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.chocolate span {
+  margin-right: 220px;
+}
+
+.chocolate:active, .chocolate:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.chocolate:hover span {
+  margin-right: 170px;
+}
+
+.napolean {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.napolean span {
+  margin-right: 60px;
+}
+
+.napolean:active, .napolean:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.napolean:hover span {
+  margin-right: 15px;
+}
+
+.orderbotton {
+  padding: 15px 20px 20px 20px;
+  border-radius: 25px;
+  width: 170px;
+  height: 15px;
+  margin-left: 80px;
+  margin-top: 30px;
+  text-align: center;
+  background-image: linear-gradient(var(--secondary-color) 20%, var(--primary-color) 80%);
+  box-shadow: 3px 3px 3px 3px #e7e4e4;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.orderbotton:active, .orderbotton:hover, .orderbotton :visited {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  box-shadow: 3px 3px 3px 3px grey;
+}
+
+footer {
+  padding-left: 25px;
+}
+
+.logo2 h4 {
+  font-family: Shrikhand;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.contact {
+  background-color: #3d3c3c;
+  color: white;
+  display: flex;
+  height: 200px;
+}
+
+.suggest {
+  padding-top: 20px;
+}
+
+.suggest i {
+  padding-right: 10px;
+}
+
+.become {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.become i {
+  padding-right: 7px;
+}
+
+.logo2 p {
+  padding-bottom: 10px;
+}
+
+/*# sourceMappingURL=bastille.css.map */

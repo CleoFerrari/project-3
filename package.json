@@ -1,0 +1,17 @@
+{
+  "name": "project3",
+  "version": "1.0.0",
+  "description": "project3",
+  "main": "index.js",
+  "scripts": {
+      "scss": "sass --watch scss:css"
+  },
+  "keywords": [
+    "project3"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.0"
+  }
+}

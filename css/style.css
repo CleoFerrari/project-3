@@ -1,0 +1,2429 @@
+:root {
+  --primary-color: hsl(267, 66%, 60%);
+  --primary-color-light:hsl(267, 87%, 76%);
+  --secondary-color:hsl(317, 100%, 74%);
+  --secondary-color-light:hsl(317, 71%, 73%);
+  --tertiary-color:hsl(165, 56%, 74%);
+}
+
+@keyframes ro {
+  0% {
+    transform: rotate(0);
+    margin-left: 50px;
+    width: 20px;
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(360deg);
+    margin-left: 25px;
+    width: 20px;
+    opacity: 100%;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+
+header {
+  min-width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.backbotton {
+  border: 1px solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+.logo-img5 {
+  width: 150px;
+  height: 30px;
+  padding-top: 10px;
+  margin-left: 80px;
+}
+
+main {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.menu-img {
+  height: 250px;
+  min-width: 100%;
+  background-size: cover;
+  background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+}
+
+.full-menu {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: #fff9f9;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: -50px;
+}
+
+.bastille {
+  font-family: Shrikhand;
+  padding-top: 30px;
+  padding-left: 25px;
+  font-size: 20px;
+}
+
+.batille-box {
+  height: 50px;
+  display: flex;
+}
+
+.heart5 {
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 170px;
+  cursor: pointer;
+}
+
+.heart5 i {
+  margin-left: 80px;
+  font-size: 50px;
+  transition: 3s linear;
+  border-color: black;
+  color: transparent;
+}
+
+.heart5,
+.heart5::after {
+  border: 2px solid;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  width: 10px;
+  height: 8px;
+  border-bottom: 0;
+}
+
+.heart5 {
+  box-sizing: border-box;
+  position: relative;
+  transform: translate(calc(-5px * var(--ggs, 1)), calc(-3px * var(--ggs, 1))) rotate(-45deg) scale(var(--ggs, 1));
+  display: block;
+}
+
+.heart5::after,
+.heart5::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.heart5::after {
+  right: -9px;
+  transform: rotate(90deg);
+  top: 5px;
+}
+
+.heart5::before {
+  width: 11px;
+  height: 11px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  left: -2px;
+  top: 3px;
+}
+
+.heart5:hover {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color) 80%);
+  transition: 3s linear;
+}
+
+.heart5:hover::after {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  transition: 3s linear;
+}
+
+.heart5:hover::before {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  transition: 3s linear;
+}
+
+.entrees p {
+  border-bottom: 3px solid var(--tertiary-color);
+  margin-left: 25px;
+  padding-top: 20px;
+  width: 40px;
+}
+
+.buttons1 {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  margin-left: 20px;
+  margin: 20px;
+  width: 340px;
+  cursor: pointer;
+}
+
+.citrus {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+}
+
+.citrus span {
+  margin-right: 160px;
+}
+
+.citrus:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.citrus:hover span {
+  margin-right: 100px;
+}
+
+.buttons1:hover .tick-mark {
+  animation: 3s ro 1;
+}
+
+.check {
+  width: 65px;
+  height: 65px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-left: 275px;
+  box-shadow: 3px 3px 3px 3px #e4e4e7;
+  background: var(--tertiary-color);
+}
+
+.tick-mark {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
+  margin-left: 45px;
+  margin-top: 20px;
+  background: white;
+  opacity: 0;
+}
+
+.tick-mark::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 50%;
+  width: 3px;
+  background-color: var(--tertiary-color);
+  content: "";
+  transform: translateX(10px) rotate(-45deg);
+  transform-origin: left bottom;
+}
+
+.tick-mark::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: var(--tertiary-color);
+  content: "";
+  transform: translateX(10px) rotate(-45deg);
+  transform-origin: left bottom;
+}
+
+.grandmothers {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.grandmothers span {
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+.grandmothers:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.grandmothers:hover span {
+  margin-right: 7px;
+  font-size: 13px;
+}
+
+.grandmothers:hover .tick-mark {
+  animation: 2s ro 2;
+}
+
+.onions {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.onions span {
+  margin-right: 220px;
+}
+
+.onions:active, .onions:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.onions:hover span {
+  margin-right: 170px;
+}
+
+.main-dish p {
+  border-bottom: 3px solid var(--tertiary-color);
+  border-width: 0 3px 3px 0;
+  margin-left: 25px;
+  padding-top: 20px;
+  width: 81px;
+}
+
+.scallops {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.scallops span {
+  margin-right: 130px;
+}
+
+.scallops:active, .scallops:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.scallops:hover span {
+  margin-right: 80px;
+}
+
+.magret {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.magret span {
+  margin-right: 120px;
+}
+
+.magret:active, .magret:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.magret:hover span {
+  margin-right: 70px;
+}
+
+.game {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.game span {
+  margin-right: 105px;
+}
+
+.game:active, .game:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.game:hover span {
+  margin-right: 55px;
+}
+
+.desserts p {
+  border-bottom: 3px solid var(--tertiary-color);
+  margin-left: 25px;
+  padding-top: 20px;
+  width: 40px;
+}
+
+.floral {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.floral span {
+  margin-right: 140px;
+}
+
+.floral:active, .floral:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.floral:hover span {
+  margin-right: 90px;
+}
+
+.chocolate {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.chocolate span {
+  margin-right: 220px;
+}
+
+.chocolate:active, .chocolate:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.chocolate:hover span {
+  margin-right: 170px;
+}
+
+.napolean {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.napolean span {
+  margin-right: 60px;
+}
+
+.napolean:active, .napolean:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.napolean:hover span {
+  margin-right: 15px;
+}
+
+.orderbotton {
+  padding: 15px 20px 20px 20px;
+  border-radius: 25px;
+  width: 170px;
+  height: 15px;
+  margin-left: 80px;
+  margin-top: 30px;
+  text-align: center;
+  background-image: linear-gradient(var(--secondary-color) 20%, var(--primary-color) 80%);
+  box-shadow: 3px 3px 3px 3px #e7e4e4;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.orderbotton:active, .orderbotton:hover, .orderbotton :visited {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  box-shadow: 3px 3px 3px 3px grey;
+}
+
+footer {
+  padding-left: 25px;
+}
+
+.logo2 h4 {
+  font-family: Shrikhand;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.contact {
+  background-color: #3d3c3c;
+  color: white;
+  display: flex;
+  height: 200px;
+}
+
+.suggest {
+  padding-top: 20px;
+}
+
+.suggest i {
+  padding-right: 10px;
+}
+
+.become {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.become i {
+  padding-right: 7px;
+}
+
+.logo2 p {
+  padding-bottom: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+
+header {
+  min-width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.backbotton {
+  border: 1px solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+.logo-img6 {
+  width: 150px;
+  height: 30px;
+  padding-top: 10px;
+  margin-left: 80px;
+}
+
+main {
+  min-width: 100%;
+}
+
+.menu2-img {
+  height: 250px;
+  min-width: 100%;
+  background-size: cover;
+  background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+}
+
+.full-menu2 {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: #fff9f9;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: -50px;
+}
+
+.enchanted {
+  min-width: 100%;
+  font-family: Shrikhand;
+  padding-top: 30px;
+  font-size: 20px;
+}
+
+.enchanted-box {
+  min-width: 100%;
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 25px;
+}
+
+.heart2 {
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.heart2 i {
+  margin-left: 80px;
+  font-size: 50px;
+  transition: 3s linear;
+  border-color: black;
+  color: transparent;
+}
+
+.heart2,
+.heart2::after {
+  border: 2px solid;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  width: 10px;
+  height: 8px;
+  border-bottom: 0;
+}
+
+.heart2 {
+  box-sizing: border-box;
+  position: relative;
+  transform: translate(calc(-5px * var(--ggs, 1)), calc(-3px * var(--ggs, 1))) rotate(-45deg) scale(var(--ggs, 1));
+  display: block;
+}
+
+.heart2::after,
+.heart2::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.heart2::after {
+  right: -9px;
+  transform: rotate(90deg);
+  top: 5px;
+}
+
+.heart2::before {
+  width: 11px;
+  height: 11px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  left: -2px;
+  top: 3px;
+}
+
+.heart2:hover {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  transition: 3s linear;
+}
+
+.heart2:hover::after {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  transition: 3s linear;
+}
+
+.heart2:hover::before {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  transition: 3s linear;
+}
+
+.buttons2 {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  margin-left: 20px;
+  margin: 20px;
+  width: 340px;
+  cursor: pointer;
+}
+
+.foie {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+}
+
+.foie span {
+  margin-right: 150px;
+}
+
+.foie:active, .foie:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.foie:hover span {
+  margin-right: 100px;
+}
+
+.buttons2:hover .tick-mark {
+  animation: 2s ro 1;
+}
+
+.oscietra {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+}
+
+.oscietra span {
+  margin-right: 120px;
+}
+
+.oscietra:active, .oscietra:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.oscietra:hover span {
+  margin-right: 62px;
+}
+
+.lobster {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.lobster span {
+  margin-right: 80px;
+}
+
+.lobster:active, .lobster:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.lobster:hover span {
+  margin-right: 35px;
+}
+
+.duck {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+
+.duck span {
+  margin-right: 45px;
+}
+
+.duck:active, .duck:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.duck:hover span {
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.fresh {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+}
+
+.fresh span {
+  margin-right: 110px;
+}
+
+.fresh:active, .fresh:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.fresh:hover span {
+  margin-right: 60px;
+}
+
+.pan {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.7s;
+}
+
+.pan span {
+  margin-right: 70px;
+}
+
+.pan:active, .pan:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.pan:hover span {
+  margin-right: 20px;
+}
+
+.braised {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.8s;
+}
+
+.braised span {
+  margin-right: 68px;
+}
+
+.braised:active, .braised:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.braised:hover span {
+  margin-right: 20px;
+}
+
+.chocola {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.9s;
+}
+
+.chocola span {
+  margin-right: 62px;
+}
+
+.chocola:active, .chocola:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.chocola:hover span {
+  margin-right: 20px;
+}
+
+.baba {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+
+.baba span {
+  margin-right: 145px;
+}
+
+.baba:active, .baba:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.baba:hover span {
+  margin-right: 100px;
+}
+
+.lemon-meringue {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 1.1s;
+}
+
+.lemon-meringue span {
+  margin-right: 180px;
+}
+
+.lemon-meringue:active, .lemon-meringue:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.lemon-meringue:hover span {
+  margin-right: 135px;
+}
+
+footer {
+  padding-left: 25px;
+}
+
+.logo2 h4 {
+  font-family: Shrikhand;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.contact {
+  background-color: #3d3c3c;
+  color: white;
+  display: flex;
+  height: 200px;
+}
+
+.suggest {
+  padding-top: 20px;
+}
+
+.suggest i {
+  padding-right: 10px;
+}
+
+.become {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.become i {
+  padding-right: 7px;
+}
+
+.logo2 p {
+  padding-bottom: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+
+header {
+  min-width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.backbotton {
+  border: 1px solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+.logo-img3 {
+  width: 150px;
+  height: 30px;
+  padding-top: 10px;
+  margin-left: 80px;
+}
+
+main {
+  min-width: 100%;
+}
+
+.menu3-img {
+  height: 250px;
+  min-width: 100%;
+  background-size: cover;
+  background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+}
+
+.full-menu3 {
+  background-color: #fff9f9;
+  min-height: 100%;
+  min-width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: -50px;
+}
+
+.fullpalette {
+  min-width: 100%;
+  font-family: Shrikhand;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.fullpalette-box {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  padding-left: 20px;
+}
+
+.fullpalette i {
+  margin-left: 100px;
+  padding-top: 10px;
+}
+
+.heart3 {
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 110px;
+  cursor: pointer;
+}
+
+.heart3 i {
+  margin-left: 80px;
+  font-size: 50px;
+  transition: 3s linear;
+  border-color: black;
+  color: transparent;
+}
+
+.heart3,
+.heart3::after {
+  border: 2px solid;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  width: 10px;
+  height: 8px;
+  border-bottom: 0;
+}
+
+.heart3 {
+  box-sizing: border-box;
+  position: relative;
+  transform: translate(calc(-5px * var(--ggs, 1)), calc(-3px * var(--ggs, 1))) rotate(-45deg) scale(var(--ggs, 1));
+  display: block;
+}
+
+.heart3::after,
+.heart3::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.heart3::after {
+  right: -9px;
+  transform: rotate(90deg);
+  top: 5px;
+}
+
+.heart3::before {
+  width: 11px;
+  height: 11px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  left: -2px;
+  top: 3px;
+}
+
+.heart3:hover {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  transition: 3s linear;
+}
+
+.heart3:hover::after {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  transition: 3s linear;
+}
+
+.heart3:hover::before {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  transition: 3s linear;
+}
+
+.buttons3 {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  margin-left: 20px;
+  margin: 20px;
+  width: 340px;
+  cursor: pointer;
+}
+
+.escargot {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+}
+
+.escargot span {
+  margin-right: 110px;
+}
+
+.escargot:active, .escargot:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.escargot:hover span {
+  margin-right: 60px;
+}
+
+.buttons3:hover .tick-mark {
+  animation: 2s ro 1;
+}
+
+.duck-foie {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+}
+
+.duck-foie span {
+  margin-right: 87px;
+}
+
+.duck-foie:active, .duck-foie:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.duck-foie:hover span {
+  margin-right: 40px;
+}
+
+.fried {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.fried span {
+  margin-right: 262px;
+}
+
+.fried:active, .fried:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.fried:hover span {
+  margin-right: 210px;
+}
+
+.herb {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+
+.herb span {
+  margin-right: 2px;
+  font-size: 15px;
+}
+
+.herb:active, .herb:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.herb:hover span {
+  margin-right: 2px;
+  font-size: 12px;
+}
+
+.ox {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+}
+
+.ox span {
+  margin-right: 7px;
+}
+
+.ox:active, .ox:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.ox:hover span {
+  margin-right: 5px;
+  font-size: 13px;
+}
+
+.filet {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.7s;
+}
+
+.filet span {
+  margin-right: 136px;
+}
+
+.filet:active, .filet:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.filet:hover span {
+  margin-right: 90px;
+}
+
+.paris {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.8s;
+}
+
+.paris span {
+  margin-right: 213px;
+}
+
+.paris:active, .paris:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.paris:hover span {
+  margin-right: 170px;
+}
+
+.macaroons {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.9s;
+}
+
+.macaroons span {
+  margin-right: 117px;
+}
+
+.macaroons:active, .macaroons:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.macaroons:hover span {
+  margin-right: 72px;
+}
+
+.mousse {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.1s;
+}
+
+.mousse span {
+  margin-right: 75px;
+}
+
+.mousse:active, .mousse:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.mousse:hover span {
+  margin-right: 30px;
+}
+
+footer {
+  padding-left: 25px;
+}
+
+.logo2 h4 {
+  font-family: Shrikhand;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.contact {
+  background-color: #3d3c3c;
+  color: white;
+  display: flex;
+  height: 200px;
+}
+
+.suggest {
+  padding-top: 20px;
+}
+
+.suggest i {
+  padding-right: 10px;
+}
+
+.become {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.become i {
+  padding-right: 7px;
+}
+
+.logo2 p {
+  padding-bottom: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+
+header {
+  min-width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.backbotton {
+  border: 1px solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+.logo-img4 {
+  width: 150px;
+  height: 30px;
+  margin-left: 80px;
+  padding-top: 10px;
+}
+
+main {
+  min-width: 100%;
+}
+
+.menu4-img {
+  height: 250px;
+  min-width: 100%;
+  background-size: cover;
+  background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+}
+
+.full-menu4 {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: #fff9f9;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: -50px;
+}
+
+.buttons4 {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  margin-left: 20px;
+  margin: 20px;
+  width: 340px;
+  cursor: pointer;
+}
+
+.legourmand {
+  min-width: 100%;
+  font-family: Shrikhand;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.legourmand-box {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  padding-left: 25px;
+}
+
+.heart4 {
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 130px;
+  cursor: pointer;
+}
+
+.heart4 i {
+  margin-left: 80px;
+  font-size: 50px;
+  transition: 3s linear;
+  border-color: black;
+  color: transparent;
+}
+
+.heart4,
+.heart4::after {
+  border: 2px solid;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  width: 10px;
+  height: 8px;
+  border-bottom: 0;
+}
+
+.heart4 {
+  box-sizing: border-box;
+  position: relative;
+  transform: translate(calc(-5px * var(--ggs, 1)), calc(-3px * var(--ggs, 1))) rotate(-45deg) scale(var(--ggs, 1));
+  display: block;
+}
+
+.heart4::after,
+.heart4::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.heart4::after {
+  right: -9px;
+  transform: rotate(90deg);
+  top: 5px;
+}
+
+.heart4::before {
+  width: 11px;
+  height: 11px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  left: -2px;
+  top: 3px;
+}
+
+.heart4:hover {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  transition: 3s linear;
+}
+
+.heart4:hover::after {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  transition: 3s linear;
+}
+
+.heart4:hover::before {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  transition: 3s linear;
+}
+
+.legourmand i {
+  margin-left: 100px;
+  padding-top: 10px;
+}
+
+.tuna {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+}
+
+.tuna span {
+  margin-right: 135px;
+}
+
+.tuna:active, .tuna:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.tuna:hover span {
+  margin-right: 90px;
+}
+
+.buttons4:hover .tick-mark {
+  animation: 2s ro 1;
+}
+
+.crunchy {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+}
+
+.crunchy span {
+  margin-right: 95px;
+}
+
+.crunchy:active, .crunchy:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.crunchy:hover span {
+  margin-right: 50px;
+}
+
+.mushroom {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.mushroom span {
+  margin-right: 190px;
+}
+
+.mushroom:active, .mushroom:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.mushroom:hover span {
+  margin-right: 140px;
+}
+
+.roast {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+
+.roast span {
+  margin-right: 150px;
+}
+
+.roast:active, .roast:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.roast:hover span {
+  margin-right: 100px;
+}
+
+.roastlobster {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+}
+
+.roastlobster span {
+  margin-right: 95px;
+}
+
+.roastlobster:active, .roastlobster:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.roastlobster:hover span {
+  margin-right: 50px;
+}
+
+.angust {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.7s;
+}
+
+.angust span {
+  margin-right: 110px;
+}
+
+.angust:active, .angust:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.angust:hover span {
+  margin-right: 60px;
+}
+
+.assorted {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.8s;
+}
+
+.assorted span {
+  margin-right: 178px;
+}
+
+.assorted:active, .assorted:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.assorted:hover span {
+  margin-right: 130px;
+}
+
+.creme {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.9s;
+}
+
+.creme span {
+  margin-right: 210px;
+}
+
+.creme:active, .creme:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.creme:hover span {
+  margin-right: 160px;
+}
+
+.tiramisu {
+  position: absolute;
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px;
+  width: 320px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #f1f0f0;
+  display: flex;
+  flex-wrap: wrap;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+
+.tiramisu span {
+  margin-right: 170px;
+}
+
+.tiramisu:active, .tiramisu:hover {
+  width: 260px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: -1px 3px 3px 3px #e7e4e4;
+}
+
+.tiramisu:hover span {
+  margin-right: 120px;
+}
+
+footer {
+  padding-left: 25px;
+}
+
+.logo2 h4 {
+  font-family: Shrikhand;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.contact {
+  background-color: #3d3c3c;
+  color: white;
+  display: flex;
+  height: 200px;
+}
+
+.suggest {
+  padding-top: 20px;
+}
+
+.suggest i {
+  padding-right: 10px;
+}
+
+.become {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.become i {
+  padding-right: 7px;
+}
+
+.logo2 p {
+  padding-bottom: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+
+header {
+  min-width: 100%;
+}
+
+.logo-img {
+  width: 150px;
+  height: 30px;
+  margin-left: 115px;
+  padding-top: 10px;
+}
+
+.location {
+  min-width: 100%;
+  height: 40px;
+  background-color: #E7E6E6;
+  padding-top: 20px;
+  display: flex;
+  box-shadow: 0px 0px 0px 5px lightgray;
+}
+
+.location-icon {
+  margin-left: 120px;
+  padding-right: 20px;
+}
+
+main {
+  min-width: 100%;
+}
+
+.bookthemenu {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: #f2f2f2;
+  padding-bottom: 40px;
+  padding-top: 15px;
+}
+
+.bookthemenu h2 {
+  padding-left: 65px;
+  padding-top: 20px;
+}
+
+.bookthemenu p {
+  padding-left: 50px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  width: 280px;
+  text-align: center;
+}
+
+.bookbotton {
+  padding: 15px 20px 20px 20px;
+  border-radius: 25px;
+  width: 170px;
+  height: 15px;
+  margin-left: 80px;
+  margin-top: 30px;
+  text-align: center;
+  background-image: linear-gradient(var(--secondary-color) 20%, var(--primary-color) 80%);
+  box-shadow: 3px 3px 3px 3px #e7e4e4;
+  color: white;
+}
+
+.bookbotton:active, .bookbotton:hover, .bookbotton :visited {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  box-shadow: 3px 3px 3px 3px grey;
+}
+
+.main-content {
+  min-width: 100%;
+}
+
+.howwk {
+  min-width: 100%;
+  height: 50px;
+  padding-top: 30px;
+  margin-left: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  margin-left: 20px;
+}
+
+.btnchose {
+  padding: 10px 20px 15px 20px;
+  border-radius: 20px;
+  width: 350px;
+  height: 40px;
+  background-color: #f5f5f5;
+  margin: 15px;
+  box-shadow: 3px 3px 3px 3px #e7e4e4;
+  text-align: center;
+}
+
+.btnchose:active, .btnchose:hover, .btnchose:visited {
+  background-color: #F4E3F6;
+}
+
+.btnchose:hover i {
+  color: var(--primary-color);
+}
+
+.btnchose i {
+  padding-top: 10px;
+  margin-right: 20px;
+  margin-left: -90px;
+  color: #777575;
+}
+
+.btnchose p {
+  border-radius: 50%;
+  width: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  margin: -30px;
+  margin-top: 15px;
+}
+
+.btncreate {
+  padding: 10px 20px 15px 20px;
+  border-radius: 20px;
+  width: 350px;
+  height: 40px;
+  background-color: #f5f5f5;
+  margin: 15px;
+  box-shadow: 3px 3px 3px 3px #e7e4e4;
+  text-align: center;
+}
+
+.btncreate:active, .btncreate:hover, .btncreate:visited {
+  background-color: #F4E3F6;
+}
+
+.btncreate:hover i {
+  color: var(--primary-color);
+}
+
+.btncreate i {
+  padding-top: 10px;
+  margin-right: 20px;
+  margin-left: -90px;
+  color: #777575;
+}
+
+.btncreate p {
+  border-radius: 50%;
+  width: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  margin: -30px;
+  margin-top: 15px;
+}
+
+.btngoenjoy {
+  padding: 10px 20px 15px 20px;
+  border-radius: 20px;
+  width: 350px;
+  height: 40px;
+  background-color: #f5f5f5;
+  margin: 15px;
+  box-shadow: 3px 3px 3px 3px #e7e4e4;
+  text-align: center;
+}
+
+.btngoenjoy:active, .btngoenjoy:hover, .btngoenjoy:visited {
+  background-color: #F4E3F6;
+}
+
+.btngoenjoy:hover i {
+  color: var(--primary-color);
+}
+
+.btngoenjoy i {
+  padding-top: 8px;
+  margin-right: 20px;
+  color: #777575;
+}
+
+.btngoenjoy p {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  margin: -30px;
+  margin-top: 18px;
+}
+
+.restaurants {
+  background-color: #f5f5f5;
+  padding-top: 45px;
+  padding-bottom: 20px;
+  margin-top: 50px;
+}
+
+.restaurants h1 {
+  margin-left: 20px;
+}
+
+.card {
+  width: 90%;
+  height: 220px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px 3px #e7e4e4;
+}
+
+.card-img1 {
+  height: 70%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  background-image: url("");
+  background-size: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+}
+
+.card-desc {
+  display: flex;
+}
+
+.desc {
+  width: 80%;
+  margin: 15px;
+}
+
+.heart1 {
+  text-align: center;
+  position: relative;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.heart1 i {
+  margin-left: 80px;
+  font-size: 50px;
+  transition: 3s linear;
+  border-color: black;
+  color: transparent;
+}
+
+.heart1,
+.heart1::after {
+  border: 2px solid;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  width: 10px;
+  height: 8px;
+  border-bottom: 0;
+}
+
+.heart1 {
+  box-sizing: border-box;
+  position: relative;
+  transform: translate(calc(-5px * var(--ggs, 1)), calc(-3px * var(--ggs, 1))) rotate(-45deg) scale(var(--ggs, 1));
+  display: block;
+}
+
+.heart1::after,
+.heart1::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.heart1::after {
+  right: -9px;
+  transform: rotate(90deg);
+  top: 5px;
+}
+
+.heart1::before {
+  width: 11px;
+  height: 11px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  left: -2px;
+  top: 3px;
+}
+
+.heart1:hover {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  transition: 3s linear;
+}
+
+.heart1:hover::after {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  transition: 3s linear;
+}
+
+.heart1:hover::before {
+  background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+  transition: 3s linear;
+}
+
+.img-descp-new {
+  background-color: var(--tertiary-color);
+  color: #0E8F05;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: 238px;
+  margin-top: 15px;
+  border-radius: 2px;
+  margin-bottom: 110px;
+}
+
+.card-img2 {
+  height: 70%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  background-image: url("");
+  background-size: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+}
+
+.card-img3 {
+  height: 70%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  background-image: url("");
+  background-size: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.card-img4 {
+  height: 70%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  background-image: url("");
+  background-size: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+footer {
+  padding-left: 25px;
+}
+
+.logo2 h4 {
+  font-family: Shrikhand;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.contact {
+  background-color: #3d3c3c;
+  color: white;
+  display: flex;
+  height: 200px;
+}
+
+.suggest {
+  padding-top: 20px;
+}
+
+.suggest i {
+  padding-right: 10px;
+}
+
+.become {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.become i {
+  padding-right: 7px;
+}
+
+.logo2 p {
+  padding-bottom: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

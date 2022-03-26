@@ -1,0 +1,418 @@
+
+@import "bastille";
+@import "enchanted";
+@import "fullpalette";
+@import "legourmand";
+
+@media only screen and (min-width: 768px){  
+}
+
+
+*{
+    margin: 0;
+    padding: 0;  
+}
+
+body{
+    font-family: Roboto;
+    
+}
+
+header{
+    min-width: 100%;
+}
+
+.logo-img{
+    width: 150px;    
+    height: 30px;
+    margin-left: 115px;
+    padding-top: 10px;
+}
+
+.location{    
+    min-width: 100%;
+    height: 40px;
+    background-color: #E7E6E6;
+    padding-top: 20px;
+    display: flex;
+    box-shadow: 0px 0px 0px 5px lightgray;
+}
+
+.location-icon{
+    margin-left: 120px;
+    padding-right: 20px;
+}
+
+main{     
+    min-width: 100%;
+}
+
+.bookthemenu{
+    min-width: 100%;
+    min-height: 100%; 
+    background-color: #f2f2f2;
+    padding-bottom: 40px;
+    padding-top: 15px;
+}
+.bookthemenu h2{
+    padding-left: 65px;
+    padding-top: 20px;
+}
+
+.bookthemenu p{
+    padding-left: 50px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    width:280px;
+    text-align: center;
+}
+
+.bookbotton{
+    padding: 15px 20px 20px 20px;
+    border-radius: 25px;
+    width: 170px;
+    height: 15px;
+    margin-left: 80px;
+    margin-top: 30px;
+    text-align: center;
+    background-image: linear-gradient(var(--secondary-color) 20%, var(--primary-color) 80%);
+    box-shadow: 3px 3px 3px 3px #e7e4e4; 
+    color: white;
+}
+.bookbotton:active, .bookbotton:hover, .bookbotton :visited{ 
+    background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+    box-shadow: 3px 3px 3px 3px grey;
+    
+}
+
+
+.main-content{
+   min-width: 100%;    
+}    
+
+.howwk{
+    min-width: 100%;
+    height: 50px; 
+    padding-top: 30px;
+    margin-left: 20px;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    margin-left: 20px;
+    
+}
+
+.btnchose{
+    padding: 10px 20px 15px 20px;
+    border-radius: 20px;
+    width: 350px;
+    height: 40px;
+    background-color: #f5f5f5;
+    margin: 15px;
+    box-shadow: 3px 3px 3px 3px #e7e4e4;
+    text-align: center;
+ }
+
+.btnchose:active, .btnchose:hover, .btnchose:visited{ 
+background-color: #F4E3F6;
+}
+.btnchose:hover i{
+    color: var(--primary-color);
+
+}
+
+.btnchose i{
+padding-top: 10px;
+margin-right: 20px;
+margin-left: -90px;
+color: #777575;
+}
+
+.btnchose p{
+    border-radius: 50%;
+    width: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    margin: -30px;
+    margin-top: 15px;   
+}
+
+.btncreate{
+    padding: 10px 20px 15px 20px;
+    border-radius: 20px;
+    width: 350px;  
+    height: 40px;  
+    background-color: #f5f5f5;
+    margin: 15px;
+    box-shadow: 3px 3px 3px 3px #e7e4e4;
+    text-align: center;
+    }
+.btncreate:active, .btncreate:hover, .btncreate:visited{ 
+    background-color: #F4E3F6;
+}
+.btncreate:hover i{
+        color: var(--primary-color);
+    }
+    
+
+.btncreate i{
+    padding-top: 10px;
+    margin-right: 20px;
+    margin-left: -90px; 
+    color: #777575;
+}
+
+
+.btncreate p{
+    border-radius: 50%;
+    width: 20px;    
+    background-color: var(--primary-color);
+    color: white;
+    margin: -30px;
+    margin-top: 15px;
+}
+    
+.btngoenjoy{
+    padding: 10px 20px 15px 20px;
+    border-radius: 20px;
+    width: 350px;
+    height: 40px;
+    background-color: #f5f5f5;
+    margin: 15px;
+    box-shadow: 3px 3px 3px 3px #e7e4e4;
+    text-align: center;
+    }
+
+.btngoenjoy:active, .btngoenjoy:hover, .btngoenjoy:visited{ 
+        background-color: #F4E3F6;
+}
+.btngoenjoy:hover i{
+            color: var(--primary-color);
+        }
+          
+
+.btngoenjoy i{
+    padding-top: 8px;
+    margin-right: 20px;    
+    color: #777575;
+}
+
+.btngoenjoy p{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    margin: -30px;    
+    margin-top: 18px;
+}
+
+.restaurants{    
+    background-color: #f5f5f5;
+    padding-top: 45px;
+    padding-bottom: 20px;
+    margin-top: 50px;
+}   
+.restaurants   h1{
+        margin-left: 20px;
+    }
+
+
+.card{
+    width: 90%;
+    height: 220px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 3px #e7e4e4;
+}
+
+.card-img1{    
+    height: 70%;        
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-image: url('');
+    background-size: cover;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;        
+    background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;  
+    display: flex;    
+}
+.card-desc{
+    display: flex;       
+}
+.desc{          
+    width: 80%;
+    margin: 15px;
+}
+.heart1{              
+    text-align: center;
+    position: relative;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.heart1 i{
+    margin-left: 80px;                       
+    font-size: 50px;
+    transition: 3s linear;
+    border-color: black;
+    color: transparent;                                          
+}    
+        
+.heart1,
+.heart1::after {
+    border: 2px solid;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    width: 10px;
+     height: 8px;
+     border-bottom: 0        
+}
+.heart1 {
+    box-sizing: border-box;
+    position: relative;
+    transform:
+    translate(
+        calc(-10px / 2 * var(--ggs,1)),
+        calc(-6px / 2 * var(--ggs,1))
+        )
+        rotate(-45deg)
+        scale(var(--ggs,1));
+        display: block
+    }
+    .heart1::after,
+    .heart1::before {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+    }
+    .heart1::after {
+        right: -9px;
+        transform: rotate(90deg);
+        top: 5px
+        
+    }
+    .heart1::before {
+        width: 11px;
+        height: 11px;
+        border-left: 2px solid;
+        border-bottom: 2px solid;
+        left: -2px;
+        top: 3px
+    }
+
+    
+
+.heart1:hover{ 
+    background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+    transition: 3s linear; 
+}
+.heart1:hover::after { 
+    background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+    transition: 3s linear; 
+}
+
+.heart1:hover::before { 
+    background-image: linear-gradient(var(--secondary-color-light) 20%, var(--primary-color-light) 80%);
+    transition: 3s linear; 
+}
+
+
+.img-descp-new{
+    background-color:var(--tertiary-color);
+    color: #0E8F05;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 238px;
+    margin-top: 15px;
+    border-radius: 2px;
+    margin-bottom: 110px;
+}
+
+.card-img2{    
+    height: 70%;        
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-image: url('');
+    background-size: cover;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;        
+    background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center center; 
+    display: flex; 
+}
+
+.card-img3{    
+    height: 70%;        
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-image: url('');
+    background-size: cover;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;        
+    background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;  
+}
+
+.card-img4{    
+    height: 70%;        
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-image: url('');
+    background-size: cover;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;        
+    background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;  
+}
+
+footer{    
+    padding-left: 25px; 
+    
+}
+.logo2 h4{
+    font-family:  Shrikhand;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.contact{       
+    background-color:rgb(61, 60, 60);
+    color: white;
+    display: flex;
+    height: 200px; 
+}
+
+
+.suggest{
+    padding-top: 20px;
+    
+}
+.suggest i{
+    padding-right: 10px;
+    
+}
+
+.become{
+    padding-top: 10px; 
+    padding-bottom: 10px;
+}
+.become i{
+    padding-right: 7px;
+    
+}
+
+.logo2 p{
+    padding-bottom: 10px;
+}
+
